@@ -67,4 +67,23 @@ RUN add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo jammy
 RUN apt-get install -y librealsense2-utils
 RUN apt-get install -y librealsense2-dev
 
+# instal nanoowl deps
+RUN apt update && apt install nvidia-tensorrt -y
+RUN apt install git -y
+RUN pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+# RUN git clone https://github.com/NVIDIA-AI-IOT/torch2trt && \
+#     cd torch2trt && python3 setup.py install
+
+# # install nanoowl
+
+# RUN python3 -m pip install transformers
+
+# RUN git clone https://github.com/NVIDIA-AI-IOT/nanoowl && \
+#     cd nanoowl && \ 
+#     python3 setup.py develop --user
+# RUN mkdir -p data && \
+#     python3 -m nanoowl.build_image_encoder_engine \
+#     data/owl_image_encoder_patch32.engine \
+#     --onnx_opset=16
+
 WORKDIR /home
