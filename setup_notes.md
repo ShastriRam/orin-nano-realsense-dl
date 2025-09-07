@@ -24,3 +24,7 @@ More details can be found in the [Jetson Hacks article](https://jetsonhacks.com/
 
 `sudo apt-get update && sudo apt-get install apt-utils`
 
+## Install tenorrt
+
+`sudo apt update && apt install nvidia-tensorrt`
+
