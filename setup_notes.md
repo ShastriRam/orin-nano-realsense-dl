@@ -18,6 +18,8 @@ sudo snap install snapd_24724.snap
 sudo snap refresh --hold snapd
 ```
 
+More details can be found in the [Jetson Hacks article](https://jetsonhacks.com/2025/07/12/why-chromium-suddenly-broke-on-jetson-orin-and-how-to-bring-it-back/)
+
 ## Install `apt-utils`
 
 `sudo apt-get update && sudo apt-get install apt-utils`
